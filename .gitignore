@@ -1,0 +1,38 @@
+# Expo / React Native
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# Native builds
+android/
+ios/
+
+# Dependencies
+node_modules/
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Debug / logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS / IDE
+.DS_Store
+*.pem
+.idea/
+.vscode/
+
+# TypeScript
+*.tsbuildinfo
+
+# EAS
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+*.orig.*

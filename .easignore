@@ -1,0 +1,11 @@
+node_modules/
+.expo/
+.eas/
+.git/
+*.apk
+*.aab
+*.jks
+android/
+ios/
+# stale native folders — EAS will prebuild clean
+npm-debug.*

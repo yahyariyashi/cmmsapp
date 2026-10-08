@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "medMETRIC CMMS",
+    "slug": "medmetric-cmms",
+    "version": "1.0.29",
+    "orientation": "portrait",
+    "scheme": "medmetric",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B3D4A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.medmetric.cmms",
+      "buildNumber": "10"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B3D4A"
+      },
+      "package": "com.medmetric.cmms",
+      "versionCode": 30,
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE",
+        "android.permission.RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow medMETRIC CMMS to scan spare-part and tool QR codes."
+        }
+      ],
+
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 34,
+            "minSdkVersion": 24,
+            "kotlinVersion": "1.9.25",
+            "packagingOptions": {
+              "pickFirst": [
+                "**/libc++_shared.so"
+              ]
+            }
+          },
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#0D7377",
+          "sounds": [],
+          "defaultChannel": "medmetric-alerts"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow medMETRIC CMMS to attach photos to tickets.",
+          "cameraPermission": "Allow medMETRIC CMMS to take photos of equipment issues."
+        }
+      ]
+    ],
+    "description": "medMETRIC CMMS by medMETRIC Lab",
+    "extra": {
+      "developer": "medMETRIC Lab",
+      "versionName": "1.0.29"
+    }
+  }
+}

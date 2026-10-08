@@ -1,0 +1,15 @@
+Android Bundling failed: Unable to resolve "expo-font"
+
+This is NOT a medMETRIC server error. Metro cannot find the expo-font package.
+
+On your PC (in the medmetric-app folder), run:
+
+  npm install expo-font @expo/vector-icons
+  npx expo install expo-font @expo/vector-icons
+  npx expo start -c
+
+Or in one line:
+
+  npx expo install expo-font @expo/vector-icons && npx expo start -c
+
+Then scan the QR code again with Expo Go.

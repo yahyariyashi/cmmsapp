@@ -1,0 +1,24 @@
+medMETRIC CMMS 1.0.2 — EAS Android APK (fix Kotlin build)
+
+If you see:
+  expo-modules-core:compileReleaseKotlin
+  Gradle build failed
+
+Do this on Windows (folder NOT in OneDrive):
+
+1) Delete stale native projects (important):
+   rmdir /s /q android
+   rmdir /s /q ios
+
+2) Fresh install with Expo-compatible versions:
+   rmdir /s /q node_modules
+   del package-lock.json
+   npm install
+   npx expo install --fix
+
+3) Build APK:
+   set EAS_NO_VCS=1
+   npx eas-cli build -p android --profile preview
+
+Do NOT commit a half-generated android/ folder from an old SDK.
+EAS managed workflow generates android/ on the build server.
